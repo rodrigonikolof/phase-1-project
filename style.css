@@ -1,0 +1,19 @@
+.header{
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+.buttons-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+.buttons{
+    background-color: blueviolet;
+    padding: 1em;
+    margin: 1em;
+    cursor: pointer;
+}
+
