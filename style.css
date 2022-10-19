@@ -17,3 +17,11 @@
     cursor: pointer;
 }
 
+.favourites{
+    /* position: absolute;
+    margin-right: -75%; */
+    cursor: pointer;
+    background-color: darkgoldenrod;
+}
+
+
