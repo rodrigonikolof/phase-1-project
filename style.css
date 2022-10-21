@@ -4,12 +4,27 @@
     align-items: center;
     background-color: bisque;
 }
-.buttons-div{
+.navDiv{
     display:flex;
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
-    flex-flow: row wrap;
+    
+}
+.navDiv div:nth-of-type(1) {flex-grow: 1}
+
+
+.buttons-div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: chartreuse;
+}
+.fav-and-toggle{
+  display: flex;
+  background-color: #2196F3;
+  flex-wrap: wrap;
+  max-width: 5em;
 }
 .buttons{
     background-color: blueviolet;
@@ -18,13 +33,21 @@
     cursor: pointer;
     border-radius: 25%;
 }
+.favouritesBtn{
+  margin: 1em;
+  cursor: pointer;
+  max-width: 3em;
+}
+#bookmarks-label{
+  margin-top: -1em;
+}
 #darkmode-label{
     margin-top: 1em;
     }
-.secondDiv{
+.topDiv{
     background-color: rgb(217, 255, 0);
     display: flex;
-    justify-content:right; 
+    justify-content:space-between; 
 }
 .toggleDiv{
   display: flex;
