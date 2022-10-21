@@ -7,3 +7,5 @@ Commit 3: Repositioned dark mode toggle and favourites location; created additio
 Commit 4: Repositioned just about all buttons and re-arranged navbar.
 
 Commit 5: Yet again changed layout of navbar and button location;
+
+Commit 6: Positioned dark mode toggle at the top right, deleted one of the buttons on the top bar;
