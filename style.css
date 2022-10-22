@@ -5,8 +5,9 @@
     background-color: bisque;
 }
 
-
-.header div:nth-of-type(1) {flex-grow: 1;}
+.header div:nth-of-type(1) {
+  flex-grow: 1;
+}
 .title{
   display: flex;
   justify-content: center;
@@ -18,13 +19,12 @@
     background-color: aquamarine;
 }
 
-
-.fav-and-toggle{
+/* .fav-and-toggle{
   display: flex;
   justify-content: space-between;
   background-color: #2196F3;
  max-height: 5em;
-}
+} */
 .buttons{
     background-color: blueviolet;
     padding: 1em;
@@ -32,7 +32,7 @@
     cursor: pointer;
     border-radius: 25%;
 }
-.favouritesBtn{
+.bookmarks{
   margin: 1em;
   cursor: pointer;
   max-width: 3em;
@@ -43,11 +43,11 @@
 #darkmode-label{
     margin-top: 1em;
     }
-.topDiv{
+/* .topDiv{
     background-color: rgb(217, 255, 0);
     display: flex;
     justify-content:space-between; 
-}
+} */
 .toggleDiv{
   display: flex;
   flex-wrap: wrap;
@@ -127,10 +127,16 @@
 /****************************** ends dark mode toggle switch **************************/
 .main{
   display:flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
   background-color: rgb(75, 82, 76);
+  flex-wrap: wrap;
 }
-
+.mainPic{
+  max-width: 100%;
+}
 
 
 
