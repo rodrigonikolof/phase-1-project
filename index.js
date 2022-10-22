@@ -37,7 +37,7 @@ function renderCatPicture(data){
     <button id='nextCat'>Show Me More Cats</button>`
     document.querySelector('#nextCat').addEventListener('click', getCats)
     imageUrl = data;
-    document.querySelector('#bookmarkBtn').addEventListener('click', ()  => console.log(imageUrl))
+    document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
 }
 
 function renderDogPicture(data){
@@ -47,6 +47,35 @@ function renderDogPicture(data){
     <button id='nextDog'>Show Me More Dogs</button>`
     document.querySelector('#nextDog').addEventListener('click', getDogs)
     imageUrl = data;
-    document.querySelector('#bookmarkBtn').addEventListener('click', ()  => console.log(imageUrl))
+    document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
 }
 
+function createCatObj(data){
+    let obj = {
+        "url" : data,
+        "type": 'cat', 
+    }
+    saveAnimal(obj)
+}
+function createDogObj(data){
+    let obj = {
+        "url" : data,
+        "type": 'dog', 
+    }
+    saveAnimal(obj)
+}
+
+function saveAnimal(obj){
+    fetch('http://localhost:3000/bookmarked/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accepts' : 'application.json',
+        },
+        body: JSON.stringify(obj)
+    })
+}
+
+// fetch('http://localhost:3000/bookmarked')
+// .then(res => res.json())
+// .then(data => console.log(data))

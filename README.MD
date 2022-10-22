@@ -9,3 +9,7 @@ Commit 4: Repositioned just about all buttons and re-arranged navbar.
 Commit 5: Yet again changed layout of navbar and button location;
 
 Commit 6: Positioned dark mode toggle at the top right, deleted one of the buttons on the top bar;
+
+Commit 7: Implemented fetch for dog and cat API and rendered them on main div;
+
+Commit 8: Setup mock up json server, bookmarked images get persisted on database;
