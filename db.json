@@ -29,6 +29,11 @@
       "url": "https://cdn2.thecatapi.com/images/bag.jpg",
       "type": "cat",
       "id": 6
+    },
+    {
+      "url": "https://random.dog/a760145f-0621-4c94-803e-2c6b3593cdcb.jpg",
+      "type": "dog",
+      "id": 7
     }
   ]
 }

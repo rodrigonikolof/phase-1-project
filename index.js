@@ -1,9 +1,4 @@
-    // fetch('https://api.thecatapi.com/v1/images/search')    cat API
-	// .then(response => response.json())
-	// .then(response => console.log(response))
-
     // https://random.dog/woof.json   dog API
-
 
     // https://dog.ceo/dog-api/documentation/random another dog API
 
@@ -23,7 +18,12 @@ function getDogs (){
 
 document.querySelector('#catBtn').addEventListener('click', getCats);
 document.querySelector('#dogBtn').addEventListener('click', getDogs);
+document.querySelector('#bookmarksDiv').addEventListener('click', fetchBookmarks );
 const main = document.querySelector('.main');
+
+
+
+
 let imageUrl;
 
 function clearMain(){
@@ -76,6 +76,26 @@ function saveAnimal(obj){
     })
 }
 
-// fetch('http://localhost:3000/bookmarked')
-// .then(res => res.json())
-// .then(data => console.log(data))
+let bookmarked = [];
+
+function fetchBookmarks(){
+fetch('http://localhost:3000/bookmarked')
+.then(res => res.json())
+.then(data=> allBookmarks(data))
+}
+
+function allBookmarks(data){
+    clearMain();
+    bookmarked = [];
+    data.forEach(el => bookmarked.push(el))
+    bookmarked.forEach(el=>renderBookmarks(el))
+}
+
+function renderBookmarks(el){
+    let card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = `<img src="${el.url}" class="bookmarkPic">
+    <button>Delete</button>`;
+
+    main.appendChild(card)
+}

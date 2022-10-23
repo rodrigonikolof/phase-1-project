@@ -13,3 +13,5 @@ Commit 6: Positioned dark mode toggle at the top right, deleted one of the butto
 Commit 7: Implemented fetch for dog and cat API and rendered them on main div;
 
 Commit 8: Setup mock up json server, bookmarked images get persisted on database;
+
+Commit 9: Bookmarked items now render on click;

@@ -43,6 +43,9 @@
 #darkmode-label{
     margin-top: 1em;
     }
+#bookmarksDiv{
+    cursor: pointer;
+  }
 /* .topDiv{
     background-color: rgb(217, 255, 0);
     display: flex;
@@ -129,6 +132,7 @@
   display:flex;
   justify-content: center;
   max-width: 80%;
+  max-height: 60%;
   margin-left: 10%;
   margin-top: 3%;
   background-color: rgb(75, 82, 76);
@@ -137,9 +141,27 @@
 .mainPic{
   max-width: 100%;
   min-width: 100%;
+  max-height: 50%;
+  
 }
-
-
+.card {
+  text-align: center;
+  border: grey solid 1px;
+  /* padding: 1rem; */
+  width: auto;
+  max-height: auto;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #644be0
+}
+.bookmarkPic{
+  /* max-width: 100%;
+  min-width: 100%;
+  max-height: 70%; */
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+}
 
 
 
@@ -183,16 +205,7 @@ toybody {
   margin: 2rem;
 }
 
-.card {
-  text-align: center;
-  border: grey solid 1px;
-  padding: 1rem;
-  width: 15rem;
-  height: 25rem;
-  display: inline-grid;
-  margin: 1rem 2rem;
-  box-shadow: 3px 4px #e04b52
-}
+
 
 .toy-avatar {
   justify-self: center;
