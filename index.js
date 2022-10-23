@@ -21,9 +21,6 @@ document.querySelector('#dogBtn').addEventListener('click', getDogs);
 document.querySelector('#bookmarksDiv').addEventListener('click', fetchBookmarks );
 const main = document.querySelector('.main');
 
-
-
-
 let imageUrl;
 
 function clearMain(){
@@ -95,7 +92,17 @@ function renderBookmarks(el){
     let card = document.createElement('div')
     card.classList.add('card')
     card.innerHTML = `<img src="${el.url}" class="bookmarkPic">
-    <button>Delete</button>`;
-
+    <button id="deleteBtn">Delete</button>`;
+    let id = el.id
     main.appendChild(card)
+    card.querySelector('#deleteBtn').addEventListener('click', () => {
+                                                                        deleteBookmark(id);
+                                                                        card.remove(); })
+}
+
+function deleteBookmark(id){
+    fetch(`http://localhost:3000/bookmarked/${id}`,{
+        method: 'DELETE',
+        headers: {'Content-Type' : 'application/json', 'Accepts': 'application/json'},
+    })
 }

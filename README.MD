@@ -15,3 +15,5 @@ Commit 7: Implemented fetch for dog and cat API and rendered them on main div;
 Commit 8: Setup mock up json server, bookmarked images get persisted on database;
 
 Commit 9: Bookmarked items now render on click;
+
+Commit 10: Added functionality to delete bookmarked item;
