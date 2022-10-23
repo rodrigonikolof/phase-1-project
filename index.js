@@ -83,9 +83,30 @@ fetch('http://localhost:3000/bookmarked')
 
 function allBookmarks(data){
     clearMain();
+    main.innerHTML= `
+    <div class="filterDiv">    
+    <label>Filter:</label>
+    <select id="filter-bookmarks" name="filter-bookmarks">
+    <option value="both">Cats and Dogs</option>
+    <option value="dogs">Dogs</option>
+    <option value="cats">Cats</option>
+    </select> 
+    </div>`
+    buildFilter();
     bookmarked = [];
     data.forEach(el => bookmarked.push(el))
     bookmarked.forEach(el=>renderBookmarks(el))
+}
+function buildFilter(){
+    const filter = document.querySelector('#filter-bookmarks');
+    filter.addEventListener('change', ()=>{
+        let filterValue = filter.value;
+        filterBookmarks(filterValue);
+    })
+}
+
+function filterBookmarks(filterValue){
+    console.log(filterValue)
 }
 
 function renderBookmarks(el){
@@ -96,8 +117,9 @@ function renderBookmarks(el){
     let id = el.id
     main.appendChild(card)
     card.querySelector('#deleteBtn').addEventListener('click', () => {
-                                                                        deleteBookmark(id);
-                                                                        card.remove(); })
+    deleteBookmark(id);
+    card.remove(); 
+    })
 }
 
 function deleteBookmark(id){
@@ -106,3 +128,4 @@ function deleteBookmark(id){
         headers: {'Content-Type' : 'application/json', 'Accepts': 'application/json'},
     })
 }
+

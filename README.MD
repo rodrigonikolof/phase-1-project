@@ -17,3 +17,5 @@ Commit 8: Setup mock up json server, bookmarked images get persisted on database
 Commit 9: Bookmarked items now render on click;
 
 Commit 10: Added functionality to delete bookmarked item;
+
+Commit 11: Added filter button to bookmarks. Function filterBookmarks has been declared, next step is to build it.

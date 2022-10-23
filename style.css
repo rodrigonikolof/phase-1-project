@@ -19,12 +19,6 @@
     background-color: aquamarine;
 }
 
-/* .fav-and-toggle{
-  display: flex;
-  justify-content: space-between;
-  background-color: #2196F3;
- max-height: 5em;
-} */
 .buttons{
     background-color: blueviolet;
     padding: 1em;
@@ -46,11 +40,7 @@
 #bookmarksDiv{
     cursor: pointer;
   }
-/* .topDiv{
-    background-color: rgb(217, 255, 0);
-    display: flex;
-    justify-content:space-between; 
-} */
+
 .toggleDiv{
   display: flex;
   flex-wrap: wrap;
@@ -162,8 +152,16 @@
   height: 12rem;
   width: auto;
 }
-
-
+.filterDiv{
+  display: flex;
+  max-height: 0%;
+  min-width: 100%;
+  justify-content: end;
+  background-color: #2196F3;
+}
+label{
+  margin-right: 0.5em;
+}
 
 
 
