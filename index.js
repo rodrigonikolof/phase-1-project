@@ -30,7 +30,7 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button id='bookmarkBtn'>Save For Later</button>
+    <button id='bookmarkBtn'>Add to Bookmarks</button>
     <button id='nextCat'>Show Me More Cats</button>`
     document.querySelector('#nextCat').addEventListener('click', getCats)
     imageUrl = data;
@@ -40,11 +40,20 @@ function renderCatPicture(data){
 function renderDogPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button id='bookmarkBtn'>Save For Later</button>
+    <button id='bookmarkBtn'>Add to Bookmarks</button>
     <button id='nextDog'>Show Me More Dogs</button>`
     document.querySelector('#nextDog').addEventListener('click', getDogs)
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
+}
+
+function handleAddToBookmarks(){
+    let btn = document.querySelector('#bookmarkBtn')
+    if (btn.innerText == 'Add to Bookmarks'){
+        btn.innerText = 'Saved in Bookmarks'
+    }else{
+        btn.innerText = 'Add to Bookmarks'
+    }
 }
 
 function createCatObj(data){
@@ -53,6 +62,7 @@ function createCatObj(data){
         "type": 'cat', 
     }
     saveAnimal(obj)
+    handleAddToBookmarks()
 }
 function createDogObj(data){
     let obj = {
@@ -60,6 +70,7 @@ function createDogObj(data){
         "type": 'dog', 
     }
     saveAnimal(obj)
+    handleAddToBookmarks()
 }
 
 function saveAnimal(obj){

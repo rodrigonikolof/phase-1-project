@@ -29,6 +29,16 @@
       "url": "https://cdn2.thecatapi.com/images/MjAzMDEwNw.jpg",
       "type": "cat",
       "id": 6
+    },
+    {
+      "url": "https://random.dog/59011d06-2c3e-4fe7-ac89-d6c17e7a74c9.jpg",
+      "type": "dog",
+      "id": 7
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/IouWtnMl2.jpg",
+      "type": "cat",
+      "id": 8
     }
   ]
 }

@@ -19,3 +19,7 @@ Commit 9: Bookmarked items now render on click;
 Commit 10: Added functionality to delete bookmarked item;
 
 Commit 11: Added filter button to bookmarks. Function filterBookmarks has been declared, next step is to build it.
+
+Commit 12: Added functionality to filter function in bookmark section. 
+
+Commit 13: Started writing function handleAddToBookmark;
