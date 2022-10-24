@@ -74,6 +74,7 @@ function saveAnimal(obj){
 }
 
 let bookmarked = [];
+let filteredBookmarked = [];
 
 function fetchBookmarks(){
 fetch('http://localhost:3000/bookmarked')
@@ -87,9 +88,10 @@ function allBookmarks(data){
     <div class="filterDiv">    
     <label>Filter:</label>
     <select id="filter-bookmarks" name="filter-bookmarks">
+    <option value="" selected disabled hidden>Select</option>
     <option value="both">Cats and Dogs</option>
-    <option value="dogs">Dogs</option>
-    <option value="cats">Cats</option>
+    <option value="dog">Dogs</option>
+    <option value="cat">Cats</option>
     </select> 
     </div>`
     buildFilter();
@@ -105,16 +107,37 @@ function buildFilter(){
     })
 }
 
+
 function filterBookmarks(filterValue){
-    console.log(filterValue)
+    
+    filteredBookmarked = bookmarked.filter(el => {
+      
+    if (el.type == filterValue){return el}
+    else if(filterValue == 'both'){return el}
+    
+    })
+    main.innerHTML = `
+    <div class="filterDiv">    
+    <label>Filter:</label>
+    <select id="filter-bookmarks" name="filter-bookmarks">
+    <option value="" selected disabled hidden>Select</option>
+    <option value="both">Cats and Dogs</option>
+    <option value="dog">Dogs</option>
+    <option value="cat">Cats</option>
+    </select> 
+    </div>`;
+    buildFilter();
+    filteredBookmarked.forEach(renderBookmarks)
 }
+
+
 
 function renderBookmarks(el){
     let card = document.createElement('div')
     card.classList.add('card')
     card.innerHTML = `<img src="${el.url}" class="bookmarkPic">
     <button id="deleteBtn">Delete</button>`;
-    let id = el.id
+    let id = el.id;
     main.appendChild(card)
     card.querySelector('#deleteBtn').addEventListener('click', () => {
     deleteBookmark(id);
