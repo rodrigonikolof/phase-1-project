@@ -169,8 +169,16 @@ function deleteBookmark(id){
 
 
 // DARK MODE// 
-document.querySelector('.switch').addEventListener('click', toggleDarkMode)
-function toggleDarkMode(){
+let checkbox = document.querySelector('#checkbox')
+checkbox.addEventListener('click', ()=> {
+    document.querySelector('body').classList.toggle('dark-mode');
+   let h6 = document.querySelectorAll('h6');
+   let h2=  document.querySelectorAll('h2');
+   let ps = document.querySelectorAll('p');
+   h6.forEach((el)=> el.classList.toggle('text-dark-mode'))
+   h2.forEach((el)=> el.classList.toggle('text-dark-mode'))
+   ps.forEach((el)=> el.classList.toggle('text-dark-mode'))
+
+
     
-    document.body.classList.toggle('dark-mode')
-}
+})

@@ -1,8 +1,12 @@
+body{
+  background-color: rgb(219, 213, 213);
+}
+
 .header{
     display: flex;
     justify-content: center;
    
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 
 .header div:nth-of-type(1) {
@@ -16,7 +20,7 @@
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 .buttons{
@@ -125,7 +129,7 @@
   max-height: 60%;
   margin-left: 10%;
   margin-top: 3%;
-  background-color: rgb(75, 82, 76);
+  /* background-color: rgb(75, 82, 76); */
   flex-wrap: wrap;
 }
 .mainPic{
@@ -142,7 +146,7 @@
   max-height: auto;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #644be0
+  box-shadow: 3px 4px #6551c9
 }
 .bookmarkPic{
   /* max-width: 100%;
@@ -157,7 +161,7 @@
   max-height: 0%;
   min-width: 100%;
   justify-content: end;
-  background-color: #2196F3;
+  /* background-color: #2196F3; */
 }
 label{
   margin-right: 0.5em;
@@ -165,6 +169,9 @@ label{
 
 .dark-mode {
   background-color: #03233d;
+}
+.text-dark-mode{
+  color: beige;
 }
 
 
