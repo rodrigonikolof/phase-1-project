@@ -23,3 +23,5 @@ Commit 11: Added filter button to bookmarks. Function filterBookmarks has been d
 Commit 12: Added functionality to filter function in bookmark section. 
 
 Commit 13: Started writing function handleAddToBookmark;
+
+Commi 14: Added comments to functions changed handleAddToBookmark functionality

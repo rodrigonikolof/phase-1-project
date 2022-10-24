@@ -47,15 +47,16 @@ function renderDogPicture(data){
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
 }
 
+//changes text on Add to Bookmark button and disables it
 function handleAddToBookmarks(){
     let btn = document.querySelector('#bookmarkBtn')
     if (btn.innerText == 'Add to Bookmarks'){
-        btn.innerText = 'Saved in Bookmarks'
-    }else{
-        btn.innerText = 'Add to Bookmarks'
+        btn.innerText = 'Saved in Bookmarks';
+        btn.setAttribute('disabled', 'disabled')
     }
 }
 
+//creates objects from fetched data
 function createCatObj(data){
     let obj = {
         "url" : data,
@@ -73,6 +74,7 @@ function createDogObj(data){
     handleAddToBookmarks()
 }
 
+//sends saved object to database
 function saveAnimal(obj){
     fetch('http://localhost:3000/bookmarked/', {
         method: 'POST',
@@ -110,6 +112,8 @@ function allBookmarks(data){
     data.forEach(el => bookmarked.push(el))
     bookmarked.forEach(el=>renderBookmarks(el))
 }
+
+//listens for change in select tag and grabs value
 function buildFilter(){
     const filter = document.querySelector('#filter-bookmarks');
     filter.addEventListener('change', ()=>{
@@ -118,7 +122,7 @@ function buildFilter(){
     })
 }
 
-
+//renders bookmarks as per filtered value
 function filterBookmarks(filterValue){
     
     filteredBookmarked = bookmarked.filter(el => {
@@ -142,7 +146,7 @@ function filterBookmarks(filterValue){
 }
 
 
-
+//Creates cards/divs for bookmarked elements
 function renderBookmarks(el){
     let card = document.createElement('div')
     card.classList.add('card')
@@ -163,3 +167,10 @@ function deleteBookmark(id){
     })
 }
 
+
+// DARK MODE// 
+document.querySelector('.switch').addEventListener('click', toggleDarkMode)
+function toggleDarkMode(){
+    
+    document.body.classList.toggle('dark-mode')
+}
