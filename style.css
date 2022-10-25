@@ -140,13 +140,13 @@ body{
 }
 .card {
   text-align: center;
-  border: grey solid 1px;
+  /* border: grey solid 1px; */
   /* padding: 1rem; */
   width: auto;
   max-height: auto;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #6551c9
+  /* box-shadow: 3px 4px #6551c9 */
 }
 .bookmarkPic{
   /* max-width: 100%;
@@ -175,15 +175,74 @@ label{
 }
 
 
+
+/* MENU BUTTONS */
+.button-22 {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-22:active {
+  background-color: #006AE8;
+}
+
+.button-22:hover {
+  background-color: #1C84FF;
+}
+
+/* BOOKMARK BUTTONS */
+.button-0 {
+  position: relative;
+  background-color: #0276FF;
+  border: none;
+  border-radius: 5px;
+  height: 1.5rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 16px;
+  justify-self: center;
+  font-family: "RM Neue",sans-serif;
+}
+
+
+#filter-bookmarks{
+  background-color: #ffffff;
+  color: #0276FF;
+}
+
 @media only screen and (min-width: 700px) 
 {
 .main{ 
   max-width: 60%;
   margin-left: 20%;
 }
-
 }
-
+@media only screen and (max-width: 700px){
+  .button-22{
+    padding: 5px 8px;
+  }
+}
 
 
 

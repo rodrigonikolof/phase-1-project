@@ -39,6 +39,46 @@
       "url": "https://cdn2.thecatapi.com/images/IouWtnMl2.jpg",
       "type": "cat",
       "id": 8
+    },
+    {
+      "url": "https://random.dog/ece9c4d3-82e7-4bb7-a647-90cbf67a9d15.jpg",
+      "type": "dog",
+      "id": 9
+    },
+    {
+      "url": "https://24.media.tumblr.com/tumblr_krwvxh6KLK1qa9hjso1_1280.jpg",
+      "type": "cat",
+      "id": 10
+    },
+    {
+      "url": "https://random.dog/5f6522a4-8848-4df1-866c-df7394932dd1.jpg",
+      "type": "dog",
+      "id": 11
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/e4d.jpg",
+      "type": "cat",
+      "id": 12
+    },
+    {
+      "url": "https://random.dog/815167e9-f69a-4557-84de-e7eba5c2ba53.jpg",
+      "type": "dog",
+      "id": 13
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/PEgob-hhL.jpg",
+      "type": "cat",
+      "id": 14
+    },
+    {
+      "url": "https://random.dog/85d57704-d565-41ff-a696-539d18b8b8d3.jpg",
+      "type": "dog",
+      "id": 15
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/bpu.jpg",
+      "type": "cat",
+      "id": 16
     }
   ]
 }

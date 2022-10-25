@@ -30,8 +30,8 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button id='bookmarkBtn'>Add to Bookmarks</button>
-    <button id='nextCat'>Show Me More Cats</button>`
+    <button class="button-22" id='bookmarkBtn'>Add to Bookmarks</button>
+    <button class="button-22" id='nextCat'>Show Me More Cats</button>`
     document.querySelector('#nextCat').addEventListener('click', getCats)
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
@@ -40,8 +40,8 @@ function renderCatPicture(data){
 function renderDogPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button id='bookmarkBtn'>Add to Bookmarks</button>
-    <button id='nextDog'>Show Me More Dogs</button>`
+    <button class="button-22" id='bookmarkBtn'>Add to Bookmarks</button>
+    <button class="button-22" id='nextDog'>Show Me More Dogs</button>`
     document.querySelector('#nextDog').addEventListener('click', getDogs)
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
@@ -53,6 +53,8 @@ function handleAddToBookmarks(){
     if (btn.innerText == 'Add to Bookmarks'){
         btn.innerText = 'Saved in Bookmarks';
         btn.setAttribute('disabled', 'disabled')
+        btn.style.backgroundColor = 'grey';
+       
     }
 }
 
@@ -151,7 +153,7 @@ function renderBookmarks(el){
     let card = document.createElement('div')
     card.classList.add('card')
     card.innerHTML = `<img src="${el.url}" class="bookmarkPic">
-    <button id="deleteBtn">Delete</button>`;
+    <button class="button-0" id="deleteBtn">Delete</button>`;
     let id = el.id;
     main.appendChild(card)
     card.querySelector('#deleteBtn').addEventListener('click', () => {
