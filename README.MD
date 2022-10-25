@@ -27,3 +27,5 @@ Commit 13: Started writing function handleAddToBookmark;
 Commit 14: Added comments to functions changed handleAddToBookmark functionality
 
 Commit 15: Added functionality to dark mode toggle;
+
+Commit 16: Styled nav buttons and delete buttons within bookmarks;

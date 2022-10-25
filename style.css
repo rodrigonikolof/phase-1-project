@@ -1,12 +1,22 @@
 body{
   background-color: rgb(219, 213, 213);
 }
-
+#logo{
+  font-weight: 400;
+  font-size: 85px;
+  background-color: #03233d;
+  color: white;
+  margin-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* font-family:"RM Neue",sans-serif; */
+  
+}
 .header{
     display: flex;
     justify-content: center;
    
-    /* background-color: bisque; */
+    
 }
 
 .header div:nth-of-type(1) {
@@ -15,20 +25,13 @@ body{
 .title{
   display: flex;
   justify-content: center;
+  margin-bottom: -50px;
 }
 .navDiv{
     display:flex;
     justify-content: space-evenly;
     align-items: center;
     /* background-color: aquamarine; */
-}
-
-.buttons{
-    background-color: blueviolet;
-    padding: 1em;
-    margin: 1em;
-    cursor: pointer;
-    border-radius: 25%;
 }
 .bookmarks{
   margin: 1em;
@@ -37,6 +40,12 @@ body{
 }
 #bookmarks-label{
   margin-top: -1em;
+  background-color: #0276FF;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: "RM Neue",sans-serif;
+  font-weight: lighter;
 }
 #darkmode-label{
     margin-top: 1em;
