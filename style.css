@@ -217,7 +217,7 @@ label{
 }
 
 .button-22:hover {
-  background-color: #1C84FF;
+  background-color: #6298da;
 }
 
 /* BOOKMARK BUTTONS */
@@ -234,6 +234,19 @@ label{
   font-family: "RM Neue",sans-serif;
 }
 
+#nextCat::after{
+  content: ' \2192';
+}
+#nextDog::after{
+  content: ' \2192';
+}
+#bookmarkBtn{
+  margin-right: 100px;
+}
+#bookmarksDiv{
+  position: relative;
+  margin-bottom: 3%;
+}
 
 #filter-bookmarks{
   background-color: #ffffff;
@@ -249,7 +262,21 @@ label{
 }
 @media only screen and (max-width: 700px){
   .button-22{
-    padding: 5px 8px;
+    padding: 5px 6px;
+    margin: auto;
+  }
+  #bookmarksDiv{
+    position: relative;
+    margin-bottom: 12%;
+  }
+  .navDiv{
+   margin-bottom: -10%;
+  }
+  .mobile{
+    margin: 5px;
+  }
+  #bookmarkBtn{
+    margin-right: 1%;
   }
 }
 
@@ -301,11 +328,11 @@ toybutton {
   justify-self: center;
 }
 
-button:hover {
+/* button:hover {
   background-color: whitesmoke;
   border: #e04b52 solid 1px;
   color: #e04b52;
-}
+} */
 
 .container {
   padding: 1rem;

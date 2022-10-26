@@ -29,3 +29,7 @@ Commit 14: Added comments to functions changed handleAddToBookmark functionality
 Commit 15: Added functionality to dark mode toggle;
 
 Commit 16: Styled nav buttons and delete buttons within bookmarks;
+
+Commit 17: Overall cosmetic changes to heading, logo, bookmark button;
+
+Commit 18: Further adjustments to button placement and styling;

@@ -30,8 +30,8 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button class="button-22" id='bookmarkBtn'>Add to Bookmarks</button>
-    <button class="button-22" id='nextCat'>Show Me More Cats</button>`
+    <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
+    <button class="button-22 mobile" id='nextCat'>Next Cat</button>`
     document.querySelector('#nextCat').addEventListener('click', getCats)
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
@@ -40,8 +40,8 @@ function renderCatPicture(data){
 function renderDogPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button class="button-22" id='bookmarkBtn'>Add to Bookmarks</button>
-    <button class="button-22" id='nextDog'>Show Me More Dogs</button>`
+    <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
+    <button class="button-22 mobile" id='nextDog'>Next Dog</button>`
     document.querySelector('#nextDog').addEventListener('click', getDogs)
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
