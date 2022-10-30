@@ -100,8 +100,9 @@ fetch('http://localhost:3000/bookmarked')
 function allBookmarks(data){
     clearMain();
     main.innerHTML= `
-    <div class="filterDiv">    
-    <label>Filter:</label>
+    <h2> My Bookmarks </h2>  
+    <div class="filterDiv">  
+    <label id="filters">Filter:</label>
     <select id="filter-bookmarks" name="filter-bookmarks">
     <option value="" selected disabled hidden>Select</option>
     <option value="both">Cats and Dogs</option>
@@ -134,6 +135,7 @@ function filterBookmarks(filterValue){
     
     })
     main.innerHTML = `
+    <h2> My Bookmarks </h2> 
     <div class="filterDiv">    
     <label>Filter:</label>
     <select id="filter-bookmarks" name="filter-bookmarks">
@@ -180,7 +182,16 @@ checkbox.addEventListener('click', ()=> {
    h6.forEach((el)=> el.classList.toggle('text-dark-mode'))
    h2.forEach((el)=> el.classList.toggle('text-dark-mode'))
    ps.forEach((el)=> el.classList.toggle('text-dark-mode'))
-
+    let darkModeLabel = document.querySelector('#darkmode-label');
+    darkModeLabel.innerText == 'Dark Mode OFF' ? darkModeLabel.innerText = 'Dark Mode ON' : darkModeLabel.innerText = 'Dark Mode OFF'
 
     
 })
+
+// RANDOM HOME PAGE //
+function randomSpecies(){
+   let random = Math.round(Math.random())
+   random == 1? getCats():getDogs()
+}
+document.querySelector('#surpriseBtn').addEventListener('click', ()=> randomSpecies())
+document.querySelector('#logo').addEventListener('click', ()=> window.location.reload())

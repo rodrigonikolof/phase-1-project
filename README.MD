@@ -33,3 +33,5 @@ Commit 16: Styled nav buttons and delete buttons within bookmarks;
 Commit 17: Overall cosmetic changes to heading, logo, bookmark button;
 
 Commit 18: Further adjustments to button placement and styling;
+
+Commit 19: Random animal button added to home page, minor adjustments to dark mode; 

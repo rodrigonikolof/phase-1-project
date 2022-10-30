@@ -6,16 +6,6 @@
       "id": 1
     },
     {
-      "url": "https://cdn2.thecatapi.com/images/adh.jpg",
-      "type": "cat",
-      "id": 2
-    },
-    {
-      "url": "https://random.dog/567129ff-59d3-47b1-9e14-fd6f1652c4ab.PNG",
-      "type": "dog",
-      "id": 3
-    },
-    {
       "url": "https://random.dog/12567-30449-22158.jpg",
       "type": "dog",
       "id": 4
@@ -36,19 +26,14 @@
       "id": 7
     },
     {
-      "url": "https://cdn2.thecatapi.com/images/IouWtnMl2.jpg",
-      "type": "cat",
-      "id": 8
-    },
-    {
-      "url": "https://random.dog/ece9c4d3-82e7-4bb7-a647-90cbf67a9d15.jpg",
-      "type": "dog",
-      "id": 9
-    },
-    {
       "url": "https://24.media.tumblr.com/tumblr_krwvxh6KLK1qa9hjso1_1280.jpg",
       "type": "cat",
       "id": 10
+    },
+    {
+      "url": "https://random.dog/7a33c46e-3089-44c4-bad2-db02de71a229.jpg",
+      "type": "dog",
+      "id": 11
     }
   ]
 }

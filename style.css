@@ -12,11 +12,17 @@ body{
   /* font-family:"RM Neue",sans-serif; */
   
 }
+#logo:hover{
+  cursor: pointer;
+}
+h2{
+  font-family: "RM Neue",sans-serif;
+   color: #03233d;
+  font-size: 200%;
+}
 .header{
     display: flex;
-    justify-content: center;
-   
-    
+    justify-content: center;    
 }
 
 .header div:nth-of-type(1) {
@@ -138,9 +144,18 @@ body{
   max-height: 60%;
   margin-left: 10%;
   margin-top: 3%;
-  /* background-color: rgb(75, 82, 76); */
   flex-wrap: wrap;
 }
+.home{
+  padding-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ }
+ /* .home-container{
+  display: flex;
+  justify-content: center;
+ } */
 .mainPic{
   max-width: 100%;
   min-width: 100%;
@@ -233,7 +248,18 @@ label{
   justify-self: center;
   font-family: "RM Neue",sans-serif;
 }
+#deleteBtn:hover{
+  cursor: pointer;
+}
+#surpriseBtn{
+  /* width: 12em; */
+  font-size: 150%;
+  padding: 20px 20px;
+  margin: auto;
+  text-align: center;
+  align-items: center;
 
+}
 #nextCat::after{
   content: ' \2192';
 }
@@ -252,6 +278,7 @@ label{
   background-color: #ffffff;
   color: #0276FF;
 }
+
 
 @media only screen and (min-width: 700px) 
 {
