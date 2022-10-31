@@ -26,14 +26,14 @@
       "id": 7
     },
     {
-      "url": "https://24.media.tumblr.com/tumblr_krwvxh6KLK1qa9hjso1_1280.jpg",
-      "type": "cat",
-      "id": 10
-    },
-    {
       "url": "https://random.dog/7a33c46e-3089-44c4-bad2-db02de71a229.jpg",
       "type": "dog",
       "id": 11
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/ai5kX5f7Q.jpg",
+      "type": "cat",
+      "id": 12
     }
   ]
 }

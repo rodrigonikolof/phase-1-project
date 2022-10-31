@@ -35,3 +35,5 @@ Commit 17: Overall cosmetic changes to heading, logo, bookmark button;
 Commit 18: Further adjustments to button placement and styling;
 
 Commit 19: Random animal button added to home page, minor adjustments to dark mode; 
+
+Commit 20: Adjustments to responsiveness and button positioning;

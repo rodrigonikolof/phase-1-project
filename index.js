@@ -1,9 +1,3 @@
-    // https://random.dog/woof.json   dog API
-
-    // https://dog.ceo/dog-api/documentation/random another dog API
-
-    // https://cataas.com/#/       cat API
-
 
 function getCats(){
     fetch('https://api.thecatapi.com/v1/images/search')
@@ -30,11 +24,17 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
+    <button class="button-22 mobile" id='previous'>Previous</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextCat'>Next Cat</button>`
-    document.querySelector('#nextCat').addEventListener('click', getCats)
+    document.querySelector('#nextCat').addEventListener('click', ()=> {
+        getCats;
+        viewedPics.push(imageUrl)
+        console.log(viewedPics)
+    })
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
+    
 }
 
 function renderDogPicture(data){
@@ -46,6 +46,12 @@ function renderDogPicture(data){
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
 }
+
+
+let viewedPics =[]; // stores data to enable "previous" button //
+
+
+
 
 //changes text on Add to Bookmark button and disables it
 function handleAddToBookmarks(){
