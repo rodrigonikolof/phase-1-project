@@ -21,19 +21,14 @@
       "id": 6
     },
     {
-      "url": "https://random.dog/59011d06-2c3e-4fe7-ac89-d6c17e7a74c9.jpg",
-      "type": "dog",
-      "id": 7
-    },
-    {
-      "url": "https://random.dog/7a33c46e-3089-44c4-bad2-db02de71a229.jpg",
-      "type": "dog",
-      "id": 11
-    },
-    {
       "url": "https://cdn2.thecatapi.com/images/ai5kX5f7Q.jpg",
       "type": "cat",
       "id": 12
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/dfc.jpg",
+      "type": "cat",
+      "id": 13
     }
   ]
 }

@@ -24,25 +24,33 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button class="button-22 mobile" id='previous'>Previous</button>
+    <button class="button-22 mobile" id='previous'>Past Pics</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextCat'>Next Cat</button>`
     document.querySelector('#nextCat').addEventListener('click', ()=> {
-        getCats;
-        viewedPics.push(imageUrl)
-        console.log(viewedPics)
+        getCats();
+        pastCatsObj(data)        
     })
-    imageUrl = data;
-    document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
+    document.querySelector('#previous').addEventListener('click', () =>{
+        if (viewedPics.length == 0){ 
+            document.querySelector('#previous').innerText = 'Nothing Here'}
+        else{pastPics()} 
+    })
     
+    document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
+    imageUrl = data;
 }
 
 function renderDogPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
+    <button class="button-22 mobile" id='previous'>Past Pics</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextDog'>Next Dog</button>`
-    document.querySelector('#nextDog').addEventListener('click', getDogs)
+    document.querySelector('#nextDog').addEventListener('click', ()=>{
+        getDogs();
+        pastDogsObj(data)
+    })
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
 }
@@ -50,6 +58,50 @@ function renderDogPicture(data){
 
 let viewedPics =[]; // stores data to enable "previous" button //
 
+
+function pastCatsObj(data) {
+    let obj = {
+        "url" : data,
+        "type": 'cat', 
+    }
+    viewedPics.push(obj)
+}
+function pastDogsObj(data) {
+    let obj = {
+        "url" : data,
+        "type": 'dog', 
+    }
+    viewedPics.push(obj) 
+}
+
+function pastPics(){
+    // clearMain();
+    
+
+
+    // main.innerHTML= `
+    // <h2> Previous Pics </h2>  
+    // <div class="filterDiv">  
+    // <label id="filters">Filter:</label>
+    // <select id="filter-bookmarks" name="filter-bookmarks">
+    // <option value="" selected disabled hidden>Select</option>
+    // <option value="both">Cats and Dogs</option>
+    // <option value="dog">Dogs</option>
+    // <option value="cat">Cats</option>
+    // </select> 
+    // </div>`
+    // viewedPics.forEach(renderPastPics)
+}
+
+function renderPastPics(el){
+    let card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = `<img src="${el.url}" class="bookmarkPic">
+    <button class="button-0" id="deleteBtn">Delete</button>`;
+    main.appendChild(card)
+    card.querySelector('#deleteBtn').addEventListener('click', () => {
+    })
+}
 
 
 
