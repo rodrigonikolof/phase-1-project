@@ -16,11 +16,6 @@
       "id": 5
     },
     {
-      "url": "https://cdn2.thecatapi.com/images/MjAzMDEwNw.jpg",
-      "type": "cat",
-      "id": 6
-    },
-    {
       "url": "https://cdn2.thecatapi.com/images/ai5kX5f7Q.jpg",
       "type": "cat",
       "id": 12
@@ -29,6 +24,21 @@
       "url": "https://cdn2.thecatapi.com/images/dfc.jpg",
       "type": "cat",
       "id": 13
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/7lr.jpg",
+      "type": "cat",
+      "id": 14
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/ag6.png",
+      "type": "cat",
+      "id": 15
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/d3j.jpg",
+      "type": "cat",
+      "id": 16
     }
   ]
 }

@@ -37,3 +37,7 @@ Commit 18: Further adjustments to button placement and styling;
 Commit 19: Random animal button added to home page, minor adjustments to dark mode; 
 
 Commit 20: Adjustments to responsiveness and button positioning;
+
+Commit 21: Created function to access previous pics not added to Bookmarks;
+
+Commit 22: Pictures get added to viewedPics obj array and can be re-accessed if needed;

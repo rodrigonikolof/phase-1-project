@@ -24,17 +24,25 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button class="button-22 mobile" id='previous'>Past Pics</button>
+    <button class="button-22 mobile" id='previous'>Previous</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextCat'>Next Cat</button>`
     document.querySelector('#nextCat').addEventListener('click', ()=> {
         getCats();
-        pastCatsObj(data)        
+        pastCatsObj(data) 
+        arrayCounter++;       
     })
     document.querySelector('#previous').addEventListener('click', () =>{
-        if (viewedPics.length == 0){ 
-            document.querySelector('#previous').innerText = 'Nothing Here'}
-        else{pastPics()} 
+        if (arrayCounter === 0){ 
+            let previous = document.querySelector('#previous');
+            previous.innerText = 'Nothing Here';
+            previous.setAttribute('disabled', 'disabled')
+            previous.style.backgroundColor = 'grey';
+        }
+        else{
+        arrayCounter--;
+        renderCatPicture(viewedPics[arrayCounter].url);
+         } 
     })
     
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createCatObj(imageUrl))
@@ -44,12 +52,25 @@ function renderCatPicture(data){
 function renderDogPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button class="button-22 mobile" id='previous'>Past Pics</button>
+    <button class="button-22 mobile" id='previous'>Previous Pics</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextDog'>Next Dog</button>`
     document.querySelector('#nextDog').addEventListener('click', ()=>{
         getDogs();
-        pastDogsObj(data)
+        pastDogsObj(data);
+        arrayCounter++; 
+    })
+    document.querySelector('#previous').addEventListener('click', () =>{
+        if (arrayCounter === 0){ 
+            let previous = document.querySelector('#previous');
+            previous.innerText = 'Nothing Here';
+            previous.setAttribute('disabled', 'disabled')
+            previous.style.backgroundColor = 'grey';
+        }
+        else{
+        arrayCounter--;
+        renderCatPicture(viewedPics[arrayCounter].url);
+         } 
     })
     imageUrl = data;
     document.querySelector('#bookmarkBtn').addEventListener('click', ()  => createDogObj(imageUrl))
@@ -57,8 +78,9 @@ function renderDogPicture(data){
 
 
 let viewedPics =[]; // stores data to enable "previous" button //
+let arrayCounter = 0;
 
-
+//adds viewed cat to array without saving to bookmarks//
 function pastCatsObj(data) {
     let obj = {
         "url" : data,
@@ -74,34 +96,22 @@ function pastDogsObj(data) {
     viewedPics.push(obj) 
 }
 
-function pastPics(){
-    // clearMain();
+// // // loads array viewedPics //
+// function pastPics(){
+//     clearMain();
+//     main.innerHTML= `
+//     <h2> Previous Pics </h2>  
+//     <div class="filterDiv">  
+//     <label id="filters">Filter:</label>
+//     <select id="filter-bookmarks" name="filter-bookmarks">
+//     <option value="" selected disabled hidden>Select</option>
+//     <option value="both">Cats and Dogs</option>
+//     <option value="dog">Dogs</option>
+//     <option value="cat">Cats</option>
+//     </select> 
+//     </div>`
     
-
-
-    // main.innerHTML= `
-    // <h2> Previous Pics </h2>  
-    // <div class="filterDiv">  
-    // <label id="filters">Filter:</label>
-    // <select id="filter-bookmarks" name="filter-bookmarks">
-    // <option value="" selected disabled hidden>Select</option>
-    // <option value="both">Cats and Dogs</option>
-    // <option value="dog">Dogs</option>
-    // <option value="cat">Cats</option>
-    // </select> 
-    // </div>`
-    // viewedPics.forEach(renderPastPics)
-}
-
-function renderPastPics(el){
-    let card = document.createElement('div')
-    card.classList.add('card')
-    card.innerHTML = `<img src="${el.url}" class="bookmarkPic">
-    <button class="button-0" id="deleteBtn">Delete</button>`;
-    main.appendChild(card)
-    card.querySelector('#deleteBtn').addEventListener('click', () => {
-    })
-}
+// }
 
 
 
