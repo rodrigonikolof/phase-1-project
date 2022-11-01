@@ -278,6 +278,9 @@ label{
 #nextDog::after{
   content: ' \2192';
 }
+#previous::before{
+  content: '\2190'
+}
 #bookmarkBtn{
   margin-right: 100px;
 }
@@ -301,6 +304,10 @@ label{
 .button-22{
   padding: 5px 6px;
   margin-right: 5%;
+}
+#bookmarkBtn{
+  margin-left: 2%;
+  margin-right: 6%;
 }
 #bookmarksDiv{
   margin-top: -1.5px;

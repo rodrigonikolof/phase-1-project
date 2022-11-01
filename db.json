@@ -26,19 +26,19 @@
       "id": 13
     },
     {
-      "url": "https://cdn2.thecatapi.com/images/7lr.jpg",
-      "type": "cat",
-      "id": 14
-    },
-    {
-      "url": "https://cdn2.thecatapi.com/images/ag6.png",
-      "type": "cat",
-      "id": 15
-    },
-    {
       "url": "https://cdn2.thecatapi.com/images/d3j.jpg",
       "type": "cat",
       "id": 16
+    },
+    {
+      "url": "https://random.dog/8c9dd457-5907-4fd4-a825-f8c576fe1284.jpeg",
+      "type": "dog",
+      "id": 17
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/smuGD4z2U.jpg",
+      "type": "cat",
+      "id": 18
     }
   ]
 }
