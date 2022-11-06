@@ -43,3 +43,5 @@ Commit 21: Created function to access previous pics not added to Bookmarks;
 Commit 22: Pictures get added to viewedPics obj array and can be re-accessed if needed;
 
 Commit 23: Adjustments to 'Previous' and 'Save to Bookmarks' buttons placement on large screens;
+
+Commit 24: Previous button greyed out until Next is clicked; 

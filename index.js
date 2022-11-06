@@ -24,20 +24,24 @@ function clearMain(){
 function renderCatPicture(data){
     clearMain();
     main.innerHTML = `<img class='mainPic'src='${data}'>
-    <button class="button-22 mobile" id='previous'>Previous</button>
+    <button class="button-22 mobile" id='previous' >Previous</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextCat'>Next Cat</button>`
+
+    arrayCounter == 0? document.querySelector('#previous').classList.add('disabled-button') : null;
+
     document.querySelector('#nextCat').addEventListener('click', ()=> {
         getCats();
         pastCatsObj(data) 
-        arrayCounter++;       
+        arrayCounter++;   
+         
     })
     document.querySelector('#previous').addEventListener('click', () =>{
         if (arrayCounter === 0){ 
             let previous = document.querySelector('#previous');
             previous.innerText = 'Nothing Here';
             previous.setAttribute('disabled', 'disabled')
-            previous.style.backgroundColor = 'grey';
+            // previous.style.backgroundColor = 'grey';
         }
         else{
         arrayCounter--;
@@ -55,6 +59,9 @@ function renderDogPicture(data){
     <button class="button-22 mobile" id='previous'>Previous Pics</button>
     <button class="button-22 mobile" id='bookmarkBtn'>Add to Bookmarks</button>
     <button class="button-22 mobile" id='nextDog'>Next Dog</button>`
+
+    arrayCounter == 0? document.querySelector('#previous').classList.add('disabled-button') : null;
+
     document.querySelector('#nextDog').addEventListener('click', ()=>{
         getDogs();
         pastDogsObj(data);

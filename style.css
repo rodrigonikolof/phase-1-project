@@ -243,6 +243,10 @@ label{
   background-color: #006AE8;
 }
 
+.disabled-button{
+  background-color: grey;
+}
+
 .button-22:hover {
   background-color: #6298da;
 }

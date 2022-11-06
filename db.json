@@ -16,11 +16,6 @@
       "id": 5
     },
     {
-      "url": "https://cdn2.thecatapi.com/images/ai5kX5f7Q.jpg",
-      "type": "cat",
-      "id": 12
-    },
-    {
       "url": "https://cdn2.thecatapi.com/images/dfc.jpg",
       "type": "cat",
       "id": 13
@@ -31,13 +26,13 @@
       "id": 16
     },
     {
-      "url": "https://random.dog/8c9dd457-5907-4fd4-a825-f8c576fe1284.jpeg",
-      "type": "dog",
+      "url": "https://cdn2.thecatapi.com/images/dj7.jpg",
+      "type": "cat",
       "id": 17
     },
     {
-      "url": "https://cdn2.thecatapi.com/images/smuGD4z2U.jpg",
-      "type": "cat",
+      "url": "https://random.dog/2ee86ac3-9bc3-49bb-998d-1bb7a1a913e9.jpg",
+      "type": "dog",
       "id": 18
     }
   ]
